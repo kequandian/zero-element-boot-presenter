@@ -14,7 +14,9 @@
     "lodash": "^4.17.19",
     "react": "^16.8.6",
     "react-dom": "^16.8.6",
-    "zero-element": "^1.0.0"
+    "zero-element": "^1.0.0",
+    "zero-element-boot": "file:../../boot/zero-element-boot",
+    "zero-element-boot-plugin-theme": "file:../zero-element-boot-plugin-theme"
   },
   "devDependencies": {
     "@babel/plugin-proposal-class-properties": "^7.13.0",
