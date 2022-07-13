@@ -18,11 +18,11 @@ export default function index(props) {
 
     const { icon = '', title = '', navigation, nextIcon = '' } = props
 
-    console.log('props === ', props)
+    // console.log('props === ', props)
 
 
     const queryData = useQuery(props.navigation)
-    console.log('queryData === ', queryData)
+    // console.log('queryData === ', queryData)
 
     const path = () => {
         history.push(queryData)
@@ -31,10 +31,10 @@ export default function index(props) {
     const onnextClick = navigation ? path : null
 
     return (
-        <CssCart backgroundColor='#f7f9fa' height='30px' width='100%' padding='' margin='2px 0 0 0 ' >
+        <CssCart backgroundColor='#f7f9fa' height='36px' width='100%' padding='' margin='8px 0 0 0 ' >
             <Flex>
                 <Flex w='100%'>
-                    <div style={{ width: '20px', margin: '0 6px' }} >
+                    <div style={{ width: '20px', margin: '4px 6px' }} >
                         <img src={icon} width='16px' height='16px' />
                     </div>
                     <ItemTitle>
