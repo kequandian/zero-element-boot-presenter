@@ -1,9 +1,11 @@
 import React from 'react';
 import CssCart from 'zero-element-boot/lib/components/cart/CssCart'
-import {Stack } from '@chakra-ui/react'
+import { Stack } from '@chakra-ui/react'
 import Flexbox from 'zero-element-boot/lib/components/layout/Flexbox';
 import Avatar from 'zero-element-boot/lib/components/presenter/Avatar'
 import Round from 'zero-element-boot/lib/components/layout/Round';
+import ItemTitleBold from '@/components/text/ItemTitleBold';
+import ItemTitle from '@/components/text/ItemTitle';
 
 /**
  * 
@@ -25,12 +27,12 @@ export default function index(props) {
                             <Avatar size='60px' url={avatar} />
                         </Stack>
                         <Stack>
-                            <div style={{ fontSize: '14px', color: '#333333', fontWeight: 'bold' }} >
+                            <ItemTitleBold>
                                 {title}
-                            </div>
-                            <div style={{ fontSize: '14px', color: '#4b5c6b' }}>
+                            </ItemTitleBold>
+                            <ItemTitle>
                                 {subtitle}
-                            </div>
+                            </ItemTitle>
                         </Stack>
                     </Flexbox>
 
