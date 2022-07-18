@@ -1,10 +1,9 @@
 import React from 'react';
+import TestRouterBox from '@/pages/test/TestRouterBox';
 
 export default function index(props) {
 
   return (
-    <div style={{display:'flex'}}>
-      组件库
-    </div>
+  <TestRouterBox />
   )
 }
