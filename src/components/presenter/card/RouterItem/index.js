@@ -1,9 +1,11 @@
 import React from 'react';
 import CssCart from 'zero-element-boot/lib/components/cart/CssCart'
-import { Flex,Center } from '@chakra-ui/react'
+import { Flex, Center } from '@chakra-ui/react'
 import useQuery from 'zero-element-boot/lib/components/hooks/useQuery'
 import { history } from 'umi';
 import ItemTitleBold from 'zero-element-boot-plugin-theme/lib/components/text/ItemTitleBold';
+// import ItemTitle from 'zero-element-boot-plugin-theme/lib/components/text/ItemTitle';
+import ContainerInactiveTitle from 'zero-element-boot-plugin-theme/lib/components/text/ContainerInactiveTitle';
 
 /**
  * 
@@ -17,7 +19,7 @@ import ItemTitleBold from 'zero-element-boot-plugin-theme/lib/components/text/It
 
 export default function index(props) {
 
-    const { icon = '', title = '', navigation, nextIcon = '', space = '16px' } = props
+    const { icon = '', title = '', navigation, nextIcon = '', text = '', space = '16px' } = props
 
     // console.log('props === ', props)
 
@@ -33,20 +35,52 @@ export default function index(props) {
 
     return (
 
-        (!space || icon) ? (
-            <CssCart backgroundColor='#f7f9fa' height='52px' width='100%'  margin='1px 0 0  0 ' >
-                <Flex padding='13px 2px' >
+        (!space || title) ? (
+            <CssCart backgroundColor='#ffffff'    height='52px' width='100%' margin='1px 0 0  0 ' >
+                <Flex padding='12px 8px' >
                     <Flex w='100%'  >
-                        <Center h='100%'  w='32px' bg='' >
-                            <img src={icon} width='16px' height='16px' />
-                        </Center>
-                        <ItemTitleBold>
-                            {title}
-                        </ItemTitleBold>
+                        {
+                            icon ? (
+                                <>
+                                    <Center h='100%' w='32px' bg='' >
+                                        <img src={icon} width='16px' height='16px' />
+                                    </Center>
+                                    <ItemTitleBold>
+                                        {title}
+                                    </ItemTitleBold>
+                                </>
+                            ) : (
+                                    <ItemTitleBold>
+                                        {title}
+                                    </ItemTitleBold>
+                                )
+                        }
                     </Flex>
-                    <div style={{ width: '36px' }} onClick={onnextClick}>
-                        <img src={nextIcon} width='16px' height='16px' />
-                    </div>
+                    {
+                        nextIcon ? (
+                            <>
+                                <Flex h='100%' onClick={onnextClick} >
+                                    <ContainerInactiveTitle>
+                                        {text}
+                                    </ContainerInactiveTitle>
+                                    <Center >
+                                        <div style={{ width: '12px',height:'27px' }} onClick={onnextClick}>
+                                            <img src={nextIcon} width='12px'  />
+                                        </div>
+                                    </Center>
+
+                                </Flex>
+
+                            </>
+                        ) : (
+                                <Center>
+                                    <ContainerInactiveTitle>
+                                        {text}
+                                    </ContainerInactiveTitle>
+                                </Center>
+                            )
+                    }
+
                 </Flex>
             </CssCart>
         ) : (
