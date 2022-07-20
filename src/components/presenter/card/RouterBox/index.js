@@ -12,18 +12,17 @@ import RouterBoxItem from '../RouterBoxItem';
  */
 export default function index(props) {
 
-    const { items } = props
+    const { items,columns='4' } = props
 
 
     return (
 
-        <CssCart boxShadow='0 2px 8px rgba(0, 0, 0, 0.15) ' backgroundColor='#ffffff' padding='10px' margin='8px' borderRadius='8px' width=''>
+        <CssCart  backgroundColor='#ffffff' padding='4px' margin='' borderRadius='8px' width='100%'>
             <Center>
                 <Container>
-                   
                     {
                         items && items.map((item, i) => (
-                            <Gridbox columns='4'>
+                            <Gridbox columns={columns}>
                                 <RouterBoxItem  {...item} key={i} />
                             </Gridbox>
                         )

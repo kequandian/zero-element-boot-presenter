@@ -12,7 +12,7 @@ import RouterItem from '@/components/presenter/card/RouterItem';
 export default function index(props) {
 
     const { items } = props
-    console.log(items, ' == items')
+    // console.log(items, ' == items')
 
 
     // const data = [
