@@ -32,7 +32,7 @@ export default function index(props) {
     const onnextClick = navigation ? path : null
 
     return (
-        <CssCart backgroundColor='#ffffff' margin=' 8px  ' width='70px' >
+        <CssCart>
             <Center h='100%' w='100%' >
                 <Stack padding='13px 2px' >
                     {(icon && !value) ?
@@ -58,8 +58,6 @@ export default function index(props) {
                             </Flex>
                         ) : (<></>)
                     }
-
-
 
                     <Center h='' w='100%' bg='' >
                         <ItemTitle>

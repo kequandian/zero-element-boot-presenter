@@ -1,11 +1,12 @@
 import React from 'react';
 import CssCart from 'zero-element-boot/lib/components/cart/CssCart'
-import { Stack } from '@chakra-ui/react'
+import { Stack,Center } from '@chakra-ui/react'
 import Flexbox from 'zero-element-boot/lib/components/layout/Flexbox';
 import Avatar from 'zero-element-boot/lib/components/presenter/Avatar'
 import Round from 'zero-element-boot/lib/components/layout/Round';
-import ItemTitleBold from '@/components/text/ItemTitleBold';
-import ItemTitle from '@/components/text/ItemTitle';
+import ItemTitleBold from 'zero-element-boot-plugin-theme/lib/components/text/ItemTitleBold';
+import ItemTitle from 'zero-element-boot-plugin-theme/lib/components/text/ItemTitle';
+import Container from 'zero-element-boot/lib/components/container/Container'
 
 /**
  * 
@@ -16,15 +17,16 @@ import ItemTitle from '@/components/text/ItemTitle';
  */
 export default function index(props) {
 
-    const { children, title, subtitle, avatar } = props
+    const { children, title='', subtitle='', avatar ,size='60px'  } = props
 
     return React.Children.map(children, child => {
         return (
-            <CssCart width='100%' height='' backgroundColor='transparent' padding='10px'>
-                <Round direction='row' align='start-with-last-end' >
+            <CssCart width='100%' height='' backgroundColor='' padding=''>
+               <Container>
+                <Flexbox direction='row'  align='start-with-last-end' >
                     <Flexbox justify='center' direction='row' align='center' >
                         <Stack>
-                            <Avatar size='60px' url={avatar} />
+                            <Avatar size={size} url={avatar} />
                         </Stack>
                         <Stack>
                             <ItemTitleBold>
@@ -36,10 +38,11 @@ export default function index(props) {
                         </Stack>
                     </Flexbox>
 
-                    <div>
+                    <Center h='100%' w=''>
                         {child}
-                    </div>
-                </Round>
+                    </Center>
+                </Flexbox>
+                </Container>
             </CssCart>
         )
 

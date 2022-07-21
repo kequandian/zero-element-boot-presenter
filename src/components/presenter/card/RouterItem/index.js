@@ -4,7 +4,7 @@ import { Flex, Center } from '@chakra-ui/react'
 import useQuery from 'zero-element-boot/lib/components/hooks/useQuery'
 import { history } from 'umi';
 import ItemTitleBold from 'zero-element-boot-plugin-theme/lib/components/text/ItemTitleBold';
-// import ItemTitle from 'zero-element-boot-plugin-theme/lib/components/text/ItemTitle';
+import ItemTitle from 'zero-element-boot-plugin-theme/lib/components/text/ItemTitle';
 import ContainerInactiveTitle from 'zero-element-boot-plugin-theme/lib/components/text/ContainerInactiveTitle';
 
 /**
@@ -36,8 +36,8 @@ export default function index(props) {
     return (
 
         (!space || title) ? (
-            <CssCart backgroundColor='#ffffff'    height='52px' width='100%' margin='1px 0 0  0 ' >
-                <Flex padding='12px 8px' >
+            <CssCart backgroundColor='#ffffff' height='52px' width='100%' margin='1px 0 0  0 ' >
+                <Flex padding='12px 8px'h='100%' >
                     <Flex w='100%'  >
                         {
                             icon ? (
@@ -58,20 +58,18 @@ export default function index(props) {
                     </Flex>
                     {
                         nextIcon ? (
-                            <>
-                                <Flex h='100%' onClick={onnextClick} >
-                                    <ContainerInactiveTitle>
-                                        {text}
-                                    </ContainerInactiveTitle>
-                                    <Center >
-                                        <div style={{ width: '12px',height:'27px' }} onClick={onnextClick}>
-                                            <img src={nextIcon} width='12px'  />
-                                        </div>
-                                    </Center>
+                            <Flex h='100%' onClick={onnextClick} bg=''>
+                                <ContainerInactiveTitle>
+                                    {text}
+                                </ContainerInactiveTitle>
+                                <Center h='100%' w='12px' bg=''>
+                                    <div style={{ width: '12px', height: '12px', background: '' }} onClick={onnextClick}>
+                                        <img src={nextIcon} width='12px' />
+                                    </div>
+                                </Center>
 
-                                </Flex>
+                            </Flex>
 
-                            </>
                         ) : (
                                 <Center>
                                     <ContainerInactiveTitle>

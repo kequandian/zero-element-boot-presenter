@@ -2,7 +2,7 @@
   "name": "zero-element-boot-presenter",
   "version": "1.0.0",
   "description": "",
-  "main": "",
+  "main": "lib/components/index.js",
   "scripts": {
     "start": "umi dev",
     "clean": "rimraf lib/",
