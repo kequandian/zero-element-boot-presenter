@@ -7,6 +7,6 @@ import ChangeAvatar from '@/components/presenter/ChangeAvatar/index';
 export default function index(props) {
 
   return (
-  <ChangeAvatar />
+  <TestRouterBox />
   )
 }

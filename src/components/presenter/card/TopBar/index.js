@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import TopBarTitle from '@/components/presenter/Top/TopBarTitle'
+import TopBarTitle from 'zero-element-boot-plugin-theme/lib/components/text/TopBarTitle'
 import { Flex, Center, Stack } from '@chakra-ui/react'
 
 /**
