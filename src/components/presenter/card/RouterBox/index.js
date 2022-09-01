@@ -16,7 +16,7 @@ export default function index(props) {
 
 
     return (
-        <Center>
+        <Center bg="#ffffff" w='100%' borderRadius='4px'>
             <Container>
                 {
                     items && items.map((item, i) => (
