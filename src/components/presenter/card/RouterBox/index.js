@@ -12,26 +12,22 @@ import RouterBoxItem from '../RouterBoxItem';
  */
 export default function index(props) {
 
-    const { items,columns='4' } = props
+    const { items, columns = '4' } = props
 
 
     return (
-
-        <CssCart  backgroundColor='#ffffff' padding='4px' margin='' borderRadius='8px' width='100%'>
-            <Center>
-                <Container>
-                    {
-                        items && items.map((item, i) => (
-                            <Gridbox columns={columns}>
-                                <RouterBoxItem  {...item} key={i} />
-                            </Gridbox>
-                        )
-                        )
-                    }
-                </Container>
-            </Center>
-        </CssCart>
-
+        <Center bg="#ffffff" w='100%' borderRadius='4px'>
+            <Container>
+                {
+                    items && items.map((item, i) => (
+                        <Gridbox columns={columns}>
+                            <RouterBoxItem  {...item} key={i} />
+                        </Gridbox>
+                    )
+                    )
+                }
+            </Container>
+        </Center>
 
     )
 

@@ -1,6 +1,6 @@
 import React from 'react';
 import CssCart from 'zero-element-boot/lib/components/cart/CssCart'
-import { Flex, Center, Stack } from '@chakra-ui/react'
+import { Flex, Center, Box,Stack } from '@chakra-ui/react'
 import useQuery from 'zero-element-boot/lib/components/hooks/useQuery'
 import { history } from 'umi';
 import ItemTitleBold from 'zero-element-boot-plugin-theme/lib/components/text/ItemTitleBold';
@@ -39,7 +39,7 @@ export default function index(props) {
     return (
         <>
             {(title) ? (
-                <CssCart backgroundColor='#ffffff' height='32px' width='100%'  >
+                <Box bg='#ffffff' h='32px' w='100%' onClick={onnextClick}  >
                     <Container>
                         <Flexbox align='start-with-last-end' direction='row'>
                             <Center h='32px' w='' bg='' >
@@ -95,7 +95,7 @@ export default function index(props) {
                         </Flexbox>
 
                     </Container>
-                </CssCart>
+                </Box>
 
             ) :
 

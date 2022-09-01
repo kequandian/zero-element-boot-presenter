@@ -37,7 +37,7 @@ export default function index(props) {
 
         (!space || title) ? (
             <CssCart backgroundColor='#ffffff' height='52px' width='100%' margin='1px 0 0  0 ' >
-                <Flex padding='12px 8px'h='100%' >
+                <Flex padding='12px 8px'h='100%' onClick={onnextClick} >
                     <Flex w='100%'  >
                         {
                             icon ? (
