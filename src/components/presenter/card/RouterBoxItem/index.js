@@ -32,44 +32,39 @@ export default function index(props) {
     const onnextClick = navigation ? path : null
 
     return (
-        <CssCart>
-            <Center h='100%' w='100%' >
-                <Stack padding='13px 2px' >
-                    {(icon && !value) ?
-                        (
+        <Center h='100%' w='100%' >
+            <Stack padding='13px 0' onClick={onnextClick}  >
+                {(icon && !value) ?
+                    (
+                        <Center h='60px' w='100%' bg='' >
+                            <img src={icon} width='36px' height='36px' />
+                        </Center>
+                    ) : (!icon && value) ? (
+                        <Center h='20px' w='100%' bg='' >
+                            <ItemTitleBold>
+                                {value}
+                            </ItemTitleBold>
+
+                        </Center>
+                    ) : (icon && value) ? (
+                        <Flex>
+                            <Center h='60px' w='100%' bg='' margin='0 4px' >
+                                <img src={icon} width='36px' height='36px' />
+                            </Center>
                             <Center h='60px' w='100%' bg='' >
-                                <img src={icon} width='36px' height='36px' onClick={onnextClick} />
+                                {value}
                             </Center>
-                        ) : (!icon && value) ? (
-                            <Center h='20px' w='100%' bg='' >
-                                <ItemTitleBold>
-                                    {value}
-                                </ItemTitleBold>
+                        </Flex>
+                    ) : (<></>)
+                }
 
-                            </Center>
-                        ) : (icon && value) ? (
-                            <Flex>
-                                <Center h='60px' w='100%' bg='' margin='0 4px' >
-                                    <img src={icon} width='36px' height='36px' onClick={onnextClick} />
-                                </Center>
-                                <Center h='60px' w='100%' bg='' >
-                                    {value}
-                                </Center>
-                            </Flex>
-                        ) : (<></>)
-                    }
-
-                    <Center h='' w='100%' bg='' >
-                        <ItemTitle>
-                            {title}
-                        </ItemTitle>
-                    </Center>
-
-                </Stack>
-            </Center>
-
-        </CssCart>
-
+                <Center h='' w='100%' bg=''  >
+                    <ItemTitle>
+                        {title}
+                    </ItemTitle>
+                </Center>
+            </Stack>
+        </Center>
     )
 
 
